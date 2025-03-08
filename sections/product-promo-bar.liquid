@@ -1,153 +1,114 @@
-<section data-section-id="{{ section.id }}" data-section-type="product-promo-bar">
-  <div class="product-promo-bar">
-    <div class="container">
-      <div class="product-promo-bar__inner">
-        <!-- Slide 1 - Promo électronique -->
-        <a href="/collections/electronics" class="product-promo-bar__item">
-          <span class="product-promo-bar__content">
-            <span>Today's Deal: </span>
-            <span>Extra 5% OFF</span>
-            <span>Electronics</span>
-          </span>
-          <span class="product-promo-bar__timer product-promo__expiry">
-            <span class="hours">09</span><span>h : </span>
-            <span class="minutes">09</span><span>m : </span>
-            <span class="seconds">17</span><span>s</span>
-          </span>
-          <span class="product-promo-bar__shop-now-link">Shop now</span>
-        </a>
+<!-- Dans votre section product-promo-bar.liquid -->
+<div class="product-promo-bar">
+  <div class="container">
+    <div class="product-promo-bar__inner">
+      <!-- Flèche précédente -->
+      <button class="custom-prev-arrow">‹</button>
 
-        <!-- Slide 2 - Promo santé/beauté -->
+      <!-- Contenu principal -->
+      <div class="promo-content-wrapper">
         <a href="/collections/health-beauty" class="product-promo-bar__item">
           <span class="product-promo-bar__content">
-            <span>Buy 1 Get 1 <span>25% OFF</span></span>
-            <span>Health & Beauty</span>
+            <span class="promo-text-main">Buy 1 Get 1 25% OFF</span>
+            <span class="promo-text-category">Health & Beauty</span>
           </span>
-          <span class="product-promo-bar__timer product-promo__expiry">
-            <span class="hours">09</span><span>h : </span>
-            <span class="minutes">09</span><span>m : </span>
-            <span class="seconds">17</span><span>s</span>
+          <span class="product-promo-bar__timer">
+            <span>05h : </span>
+            <span>53m : </span>
+            <span class="bold-seconds">25s</span>
           </span>
-          <span class="product-promo-bar__shop-now-link">Shop now</span>
         </a>
-
-        <!-- Slide 3 - Livraison gratuite -->
-        <div class="product-promo-bar__item product-promo-bar__freeship">
-          Free shipping over $49 ● Hassle-free returns
-        </div>
       </div>
+
+      <!-- Flèche suivante -->
+      <button class="custom-next-arrow">›</button>
     </div>
   </div>
-</section>
+</div>
 
 <style>
-  .product-promo-bar {
-    background: #1a237e !important;
-    color: #ffffff;
-    padding: 14px 0;
-    font-size: 15px;
-    position: relative;
-  }
+.product-promo-bar {
+  background: #1a237e;
+  padding: 12px 0;
+  font-size: 14px;
+}
 
-  .product-promo-bar__inner {
-    min-height: 49.1875px;
-  }
+.product-promo-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
 
-  .product-promo-bar__item {
-    width: 100%;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 0 15px;
-    opacity: 0 !important;
-    transition: opacity 0.3s !important;
-  }
+.promo-content-wrapper {
+  flex-grow: 1;
+  max-width: 80%;
+  text-align: center;
+}
 
-  .product-promo-bar__item.is-selected {
-    opacity: 1 !important;
-  }
+.product-promo-bar__item {
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
 
-  .product-promo-bar__timer span:not(.hours, .minutes, .seconds) {
-    opacity: 0.8;
-  }
+.promo-text-main {
+  font-weight: 500;
+  margin-right: 10px;
+}
 
-  .product-promo-bar__shop-now-link {
-    margin-left: 12px;
-    text-decoration: underline;
-    font-weight: 500;
-  }
+.promo-text-category {
+  opacity: 0.9;
+}
 
-  .flickity-button {
-    background: rgba(255,255,255,0.15) !important;
-    backdrop-filter: blur(2px);
-  }
+.product-promo-bar__timer {
+  display: inline-flex;
+  gap: 3px;
+  margin-left: 15px;
+}
+
+.bold-seconds {
+  font-weight: 700;
+}
+
+/* Style des flèches */
+.custom-prev-arrow,
+.custom-next-arrow {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: opacity 0.3s;
+}
+
+.custom-prev-arrow:hover,
+.custom-next-arrow:hover {
+  opacity: 0.8;
+}
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialisation Flickity
-  var checkFlickity = function(callback) {
-    if(window.Flickity) callback();
-    else setTimeout(() => checkFlickity(callback), 500);
-  }
-
-  checkFlickity(() => {
-    new Flickity('.product-promo-bar__inner', {
-      autoPlay: 6000,
-      pageDots: false,
-      prevNextButtons: true,
-      cellAlign: 'center',
-      wrapAround: true,
-      selectedAttraction: 0.015,
-      imagesLoaded: true
-    });
+  // Initialisation Flickity avec paramètres modifiés
+  new Flickity('.product-promo-bar__inner', {
+    autoPlay: false,
+    pageDots: false,
+    prevNextButtons: false, // On utilise nos propres flèches
+    wrapAround: true,
+    cellAlign: 'center'
   });
 
-  // Timer synchronisé pour toutes les slides
-  function updateTimers() {
-    const timers = document.querySelectorAll('.product-promo__expiry');
-    
-    timers.forEach(timer => {
-      const hoursElement = timer.querySelector('.hours');
-      const minutesElement = timer.querySelector('.minutes');
-      const secondsElement = timer.querySelector('.seconds');
-      
-      // Calcul dynamique (à adapter avec votre heure de fin réelle)
-      const now = new Date();
-      const endTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
-      const diff = endTime - now;
-
-      const hours = Math.floor(diff / 3.6e6);
-      const minutes = Math.floor((diff % 3.6e6) / 6e4);
-      const seconds = Math.floor((diff % 6e4) / 1000);
-
-      hoursElement.textContent = String(hours).padStart(2, '0');
-      minutesElement.textContent = String(minutes).padStart(2, '0');
-      secondsElement.textContent = String(seconds).padStart(2, '0');
-    });
-  }
-
-  setInterval(updateTimers, 1000);
-  updateTimers(); // Initial call
+  // Gestion des clics sur les flèches personnalisées
+  document.querySelector('.custom-prev-arrow').addEventListener('click', () => {
+    flkty.previous();
+  });
+  
+  document.querySelector('.custom-next-arrow').addEventListener('click', () => {
+    flkty.next();
+  });
 });
 </script>
-{% schema %}
-{
-  "name": "Promo Bar",
-  "settings": [
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background",
-      "default": "#1a237e"
-    },
-    {
-      "type": "text",
-      "id": "timer_end",
-      "label": "Heure de fin (format HH:MM)",
-      "default": "23:59"
-    }
-  ]
-}
-{% endschema %}
