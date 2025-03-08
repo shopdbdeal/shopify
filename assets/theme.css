@@ -13916,3 +13916,29 @@ shopify-payment-terms {
   text-decoration: underline;
   margin-left: 10px;
 }
+/* Timer style conforme à l'image 1 */
+.product-promo-bar__timer {
+  display: inline-flex !important;
+  align-items: baseline;
+  gap: 2px;
+  margin: 0 12px;
+}
+
+.timer-number {
+  color: #ffd700 !important; 
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.timer-label {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95em;
+  position: relative;
+  top: -1px; /* Ajustement optique */
+}
+
+/* Correction de l'espacement global */
+.product-promo-bar__item {
+  gap: 8px !important; 
+  white-space: nowrap;
+}
