@@ -132,3 +132,22 @@ document.addEventListener('DOMContentLoaded', function() {
   updateTimers(); // Initial call
 });
 </script>
+{% schema %}
+{
+  "name": "Promo Bar",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#1a237e"
+    },
+    {
+      "type": "text",
+      "id": "timer_end",
+      "label": "Heure de fin (format HH:MM)",
+      "default": "23:59"
+    }
+  ]
+}
+{% endschema %}
