@@ -1,0 +1,120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_meta": {
+          "type": "product_meta",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": true,
+            "show_reviews_badge": true,
+            "show_share_buttons": false
+          }
+        },
+        "variant_selector": {
+          "type": "variant_selector",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "color",
+            "show_quantity_selector": true,
+            "show_taxes_included": false,
+            "show_inventory_quantity": true,
+            "low_inventory_threshold": 10
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "display_mode": "view_more"
+          }
+        },
+        "liquid_FYe6DG": {
+          "type": "liquid",
+          "settings": {
+            "title": "Shipping & Returns",
+            "liquid": "<div class=\"card__collapsible-content\">\n                            <div class=\"rte text--pull\">\n                              <ul>\n<li>Free shipping&nbsp;for all orders over <span class=\"shipping-policy-shipping-amount\">$49.</span>\n</li>\n<li>Once your product has shipped, it usually takes 2 to&nbsp;5 business days to receive depending on your location.</li>\n<li>You can return your product up to 30 days after receiving your order. Please make sure that the products are not used or damaged and in the original box.</li>\n</ul>\n                            </div>\n                          </div>",
+            "display_mode": "collapse"
+          }
+        },
+        "trust_pQ6iGw": {
+          "type": "trust",
+          "settings": {
+            "trust_title": "Payment & Security",
+            "show_payment_icons": true,
+            "custom_security_badge": "shopify://shop_images/shopify-secure-badge-white.svg",
+            "custom_security_badge_width": 110
+          }
+        }
+      },
+      "block_order": [
+        "product_meta",
+        "variant_selector",
+        "buy_buttons",
+        "description",
+        "liquid_FYe6DG",
+        "trust_pQ6iGw"
+      ],
+      "settings": {
+        "image_size": "small",
+        "enable_video_looping": false,
+        "enable_image_zoom": false,
+        "zoom_effect": "outside",
+        "carousel_effect": "fade"
+      }
+    },
+    "main_product_pEtYKj": {
+      "type": "main-product",
+      "disabled": true,
+      "settings": {
+        "image_size": "small",
+        "enable_video_looping": false,
+        "enable_image_zoom": false,
+        "zoom_effect": "outside",
+        "carousel_effect": "fade"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "show_quick_buy": false
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed",
+        "show_quick_buy": false
+      }
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_pEtYKj",
+    "product-recommendations",
+    "recently-viewed-products",
+    "loox-product-reviews-app-section"
+  ]
+}
