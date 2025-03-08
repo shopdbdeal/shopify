@@ -70,6 +70,9 @@
         "liquid_FYe6DG",
         "trust_pQ6iGw"
       ],
+      "custom_css": [
+        ".shopify-payment-button__more-options {display: none !important;}"
+      ],
       "settings": {
         "image_size": "small",
         "enable_video_looping": false,
