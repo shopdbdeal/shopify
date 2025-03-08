@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "heading_color": "#1e2d7d",
+    "heading_color": "#1a237e",
     "text_color": "#677279",
     "accent_color": "#00badb",
     "link_color": "#00badb",
@@ -20,14 +20,14 @@
     "success_color": "#00aa00",
     "primary_button_background": "#00badb",
     "primary_button_text_color": "#ffffff",
-    "secondary_button_background": "#1e2d7d",
+    "secondary_button_background": "#1a237e",
     "secondary_button_text_color": "#ffffff",
-    "header_background": "#1e2d7d",
+    "header_background": "#1a237e",
     "header_text_color": "#ffffff",
     "header_light_text_color": "#a3afef",
     "header_accent_color": "#00badb",
     "footer_background_color": "#f3f5f6",
-    "footer_heading_text_color": "#1e2d7d",
+    "footer_heading_text_color": "#1a237e",
     "footer_body_text_color": "#677279",
     "footer_accent_color": "#00badb",
     "product_on_sale_accent": "#ee0000",
@@ -149,7 +149,7 @@
         "type": "announcement-bar",
         "settings": {
           "show_announcement": true,
-          "background": "#1e2d7d",
+          "background": "#1a237e",
           "text_color": "#ffffff",
           "text": "Announce something here",
           "text_position": "center",
