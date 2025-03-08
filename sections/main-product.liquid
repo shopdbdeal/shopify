@@ -414,7 +414,9 @@
           {% render 'icon', icon: 'close' %}
         </button>
         <div class="popup-text">
+        {%- if block.settings[popup_setting] != blank -%}
           {{ block.settings[popup_setting] }}
+        {%- endif -%}
         </div>
       </div>
     </div>
