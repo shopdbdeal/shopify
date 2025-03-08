@@ -64,7 +64,7 @@
             "custom_security_badge_2": "shopify://shop_images/k.svg",
             "custom_security_badge_width_2": 70,
             "badge_link_2": "",
-            "popup_html_2": "",
+            "popup_html_2": "<div style=\"position:relative;padding-bottom:140%;\">\n  <iframe src=\"https://guarantee-cdn.com/WebContent/AccountInfo/get?MPHASH=6yoLk1dWe8yB67Fm4xKLVHculYxe%2FNPv%2F4SwSx505grobB70LGb%2FxcSZr6LZVhts%2FieKuZ8qLNFq5nKaTtW60A%3D%3D&TS=b9fba&w=280\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;border:none\"></iframe>\n</div>",
             "custom_security_badge_3": "shopify://shop_images/shopify-secure-badge-white.svg",
             "custom_security_badge_width_3": 100,
             "badge_link_3": "",
