@@ -59,10 +59,16 @@
             "show_payment_icons": true,
             "custom_security_badge_1": "shopify://shop_images/svgexport-1.svg",
             "custom_security_badge_width_1": 100,
+            "badge_link_1": "",
+            "popup_content_1": "<p>dsfsq</p>",
             "custom_security_badge_2": "shopify://shop_images/k.svg",
             "custom_security_badge_width_2": 70,
+            "badge_link_2": "",
+            "popup_content_2": "",
             "custom_security_badge_3": "shopify://shop_images/shopify-secure-badge-white.svg",
-            "custom_security_badge_width_3": 100
+            "custom_security_badge_width_3": 100,
+            "badge_link_3": "",
+            "popup_content_3": ""
           }
         }
       },
