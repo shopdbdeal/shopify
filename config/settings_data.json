@@ -90,8 +90,8 @@
         "settings": {
           "enable_sticky_header": true,
           "logo": "shopify://shop_images/White_DS_Logo_185x_2x_f5bbb04e-ce19-443e-9184-cb018aa231c7.png",
-          "logo_max_width": 140,
-          "mobile_logo_max_width": 100,
+          "logo_max_width": 185,
+          "mobile_logo_max_width": 140,
           "show_locale_selector": true,
           "show_country_selector": false,
           "navigation_menu": "main-menu",
