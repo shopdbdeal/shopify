@@ -58,7 +58,7 @@
             "trust_title": "Payment & Security",
             "show_payment_icons": true,
             "custom_security_badge": "shopify://shop_images/shopify-secure-badge-white.svg",
-            "custom_security_badge_width": 200
+            "custom_security_badge_width": 110
           }
         }
       },
