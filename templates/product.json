@@ -60,8 +60,9 @@
             "custom_security_badge_1": "shopify://shop_images/svgexport-1.svg",
             "custom_security_badge_width_1": 100,
             "custom_security_badge_2": "shopify://shop_images/k.svg",
-            "custom_security_badge_width_2": 100,
-            "custom_security_badge_width_3": 150
+            "custom_security_badge_width_2": 70,
+            "custom_security_badge_3": "shopify://shop_images/shopify-secure-badge-white.svg",
+            "custom_security_badge_width_3": 100
           }
         }
       },
