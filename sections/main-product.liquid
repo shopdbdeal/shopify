@@ -276,8 +276,9 @@
                           <hr class="card__separator">
                         {%- endif -%}
 
-                        {%- if block.settings.custom_security_badge_1 or block.settings.custom_security_badge_2 or block.settings.custom_security_badge_3 -%}
-                          <div class="trust-badges-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
+                        {%- if block.settings.custom_security_badge_1 or block.settings.custom_security_badge_2 or block.settings.custom_security_badge_3 -%}  
+                          <p class="card__subtitle heading h6">{{ 'product.general.security' | t }}</p>
+                          <div class="trust-badges-container" style="display: flex; justify-content: flex-start; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
                             {%- for i in (1..3) -%}
                               {%- assign badge_setting = 'custom_security_badge_' | append: i -%}
                               {%- assign width_setting = 'custom_security_badge_width_' | append: i -%}
@@ -748,7 +749,7 @@
         {
           "type": "range",
           "id": "custom_security_badge_width_1",
-          "min": 100,
+          "min": 10,
           "max": 500,
           "step": 10,
           "unit": "px",
@@ -768,7 +769,7 @@
         {
           "type": "range",
           "id": "custom_security_badge_width_2",
-          "min": 100,
+          "min": 10,
           "max": 500,
           "step": 10,
           "unit": "px",
@@ -788,7 +789,7 @@
         {
           "type": "range",
           "id": "custom_security_badge_width_3",
-          "min": 100,
+          "min": 10,
           "max": 500,
           "step": 10,
           "unit": "px",
