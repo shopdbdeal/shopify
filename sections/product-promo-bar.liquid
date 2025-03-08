@@ -2,27 +2,36 @@
   <div class="product-promo-bar">
     <div class="container">
       <div class="product-promo-bar__inner">
-        <!-- Slide 1 -->
+        <!-- Slide 1 - Promo électronique -->
         <a href="/collections/electronics" class="product-promo-bar__item">
           <span class="product-promo-bar__content">
             <span>Today's Deal: </span>
-            <span>Extra 5% OFF Electronics</span>
+            <span>Extra 5% OFF</span>
+            <span>Electronics</span>
           </span>
-          <span class="product-promo-bar__timer">06h : 16m : 03s</span>
+          <span class="product-promo-bar__timer product-promo__expiry">
+            <span class="hours">09</span><span>h : </span>
+            <span class="minutes">09</span><span>m : </span>
+            <span class="seconds">17</span><span>s</span>
+          </span>
           <span class="product-promo-bar__shop-now-link">Shop now</span>
         </a>
 
-        <!-- Slide 2 -->
+        <!-- Slide 2 - Promo santé/beauté -->
         <a href="/collections/health-beauty" class="product-promo-bar__item">
           <span class="product-promo-bar__content">
-            <span>Buy 1 Get 1 25% OFF</span>
+            <span>Buy 1 Get 1 <span>25% OFF</span></span>
             <span>Health & Beauty</span>
           </span>
-          <span class="product-promo-bar__timer">06h : 16m : 03s</span>
+          <span class="product-promo-bar__timer product-promo__expiry">
+            <span class="hours">09</span><span>h : </span>
+            <span class="minutes">09</span><span>m : </span>
+            <span class="seconds">17</span><span>s</span>
+          </span>
           <span class="product-promo-bar__shop-now-link">Shop now</span>
         </a>
 
-        <!-- Slide 3 -->
+        <!-- Slide 3 - Livraison gratuite -->
         <div class="product-promo-bar__item product-promo-bar__freeship">
           Free shipping over $49 ● Hassle-free returns
         </div>
@@ -30,9 +39,96 @@
     </div>
   </div>
 </section>
-{% schema %}
-  {
-    "name": "Product Promo Bar",
-    "settings": []
+
+<style>
+  .product-promo-bar {
+    background: #1a237e !important;
+    color: #ffffff;
+    padding: 14px 0;
+    font-size: 15px;
+    position: relative;
   }
-{% endschema %}
+
+  .product-promo-bar__inner {
+    min-height: 49.1875px;
+  }
+
+  .product-promo-bar__item {
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+    opacity: 0 !important;
+    transition: opacity 0.3s !important;
+  }
+
+  .product-promo-bar__item.is-selected {
+    opacity: 1 !important;
+  }
+
+  .product-promo-bar__timer span:not(.hours, .minutes, .seconds) {
+    opacity: 0.8;
+  }
+
+  .product-promo-bar__shop-now-link {
+    margin-left: 12px;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .flickity-button {
+    background: rgba(255,255,255,0.15) !important;
+    backdrop-filter: blur(2px);
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialisation Flickity
+  var checkFlickity = function(callback) {
+    if(window.Flickity) callback();
+    else setTimeout(() => checkFlickity(callback), 500);
+  }
+
+  checkFlickity(() => {
+    new Flickity('.product-promo-bar__inner', {
+      autoPlay: 6000,
+      pageDots: false,
+      prevNextButtons: true,
+      cellAlign: 'center',
+      wrapAround: true,
+      selectedAttraction: 0.015,
+      imagesLoaded: true
+    });
+  });
+
+  // Timer synchronisé pour toutes les slides
+  function updateTimers() {
+    const timers = document.querySelectorAll('.product-promo__expiry');
+    
+    timers.forEach(timer => {
+      const hoursElement = timer.querySelector('.hours');
+      const minutesElement = timer.querySelector('.minutes');
+      const secondsElement = timer.querySelector('.seconds');
+      
+      // Calcul dynamique (à adapter avec votre heure de fin réelle)
+      const now = new Date();
+      const endTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+      const diff = endTime - now;
+
+      const hours = Math.floor(diff / 3.6e6);
+      const minutes = Math.floor((diff % 3.6e6) / 6e4);
+      const seconds = Math.floor((diff % 6e4) / 1000);
+
+      hoursElement.textContent = String(hours).padStart(2, '0');
+      minutesElement.textContent = String(minutes).padStart(2, '0');
+      secondsElement.textContent = String(seconds).padStart(2, '0');
+    });
+  }
+
+  setInterval(updateTimers, 1000);
+  updateTimers(); // Initial call
+});
+</script>
