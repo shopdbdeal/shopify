@@ -242,7 +242,7 @@
 
               {%- comment -%}
               --------------------------------------------------------------------------------------
-              TRUST BADGE
+              TRUST BADGE (MODIFICATION PRINCIPALE ICI)
               --------------------------------------------------------------------------------------
               {%- endcomment -%}
 
@@ -253,44 +253,42 @@
                   {%- assign show_payment_icons = false -%}
                 {%- endif -%}
 
-                {%- if block.settings.custom_security_badge or show_payment_icons -%}
+                {%- if block.settings.custom_security_badge_1 or block.settings.custom_security_badge_2 or block.settings.custom_security_badge_3 or show_payment_icons -%}
                   <div class="product-block-list__item product-block-list__item--trust">
                     <div class="card">
                       <div class="card__header card__header--flex">
                         <h2 class="card__title heading h3">{{ block.settings.trust_title | escape }}</h2>
-
                         {%- render 'icon', icon: 'lock', width: 22, height: 24 -%}
                       </div>
 
                       <div class="card__section">
                         {%- if show_payment_icons -%}
-                          {%- if block.settings.custom_security_badge -%}
-                            <p class="card__subtitle heading h6">{{ 'product.general.payment' | t }}</p>
-                          {%- endif -%}
-
+                          <p class="card__subtitle heading h6">{{ 'product.general.payment' | t }}</p>
                           <div class="payment-list">
                             {% for type in shop.enabled_payment_types %}
                               {{ type | payment_type_svg_tag: class: 'payment-list__item' }}
                             {% endfor %}
                           </div>
-
                           <p class="payment-list__notice">{{ 'product.general.payment_notice' | t }}</p>
                         {%- endif -%}
 
-                        {%- if show_payment_icons and block.settings.custom_security_badge -%}
+                        {%- if show_payment_icons and block.settings.custom_security_badge_1 or block.settings.custom_security_badge_2 or block.settings.custom_security_badge_3 -%}
                           <hr class="card__separator">
                         {%- endif -%}
 
-                        {%- if block.settings.custom_security_badge -%}
-                          {%- if show_payment_icons -%}
-                            <p class="card__subtitle heading h6">{{ 'product.general.security' | t }}</p>
-                          {%- endif -%}
-
-                          {%- assign badge_width = block.settings.custom_security_badge.width | at_most: 450 | append: 'x' -%}
-                          <img class="product__trust-badge" style="width: {{ block.settings.custom_security_badge_width }}px"
-                               src="{{ block.settings.custom_security_badge | img_url: badge_width }}"
-                               srcset="{{ block.settings.custom_security_badge | img_url: badge_width }} 1x, {{ block.settings.custom_security_badge | img_url: badge_width, scale: 2 }} 2x"
-                               alt="{{ block.settings.custom_security_badge.alt | escape }}">
+                        {%- if block.settings.custom_security_badge_1 or block.settings.custom_security_badge_2 or block.settings.custom_security_badge_3 -%}
+                          <div class="trust-badges-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
+                            {%- for i in (1..3) -%}
+                              {%- assign badge_setting = 'custom_security_badge_' | append: i -%}
+                              {%- assign width_setting = 'custom_security_badge_width_' | append: i -%}
+                              
+                              {%- if block.settings[badge_setting] != blank -%}
+                                <img src="{{ block.settings[badge_setting] | image_url }}" 
+                                     alt="Security badge {{ i }}"
+                                     style="width: {{ block.settings[width_setting] }}px; height: auto;">
+                              {%- endif -%}
+                            {%- endfor -%}
+                          </div>
                         {%- endif -%}
                       </div>
                     </div>
@@ -381,7 +379,6 @@
       </div>
     </div>
   {%- else -%}
-    {%- comment -%}We display the quick view within the product template so we can re-use the same settings{%- endcomment -%}
     <div class="featured-product">
       {%- render 'product-gallery' -%}
       {%- render 'product-info' -%}
@@ -393,23 +390,15 @@
   window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
   ShopifyXR('addModels', {{ product.media | where: 'media_type', 'model' | json }});
 
-  // We save the ID of the product in the local storage, as it can be used by the "recently viewed products" section
   (() => {
     let items = JSON.parse(localStorage.getItem('recentlyViewedProducts') || '[]');
-
-    // If the product already exists we first remove it
     if (items.includes({{product.id | json}})) {
       items.splice(items.indexOf({{ product.id | json }}), 1);
     }
-
     items.unshift({{ product.id | json }});
-
-    // Then, we save the current product into the local storage, by keeping only the 18 most recent
     try {
       localStorage.setItem('recentlyViewedProducts', JSON.stringify(items.slice(0, 18)));
-    } catch (error) {
-      // Do nothing, this may happen in Safari in incognito mode
-    }
+    } catch (error) {}
   })();
 </script>
 
@@ -747,19 +736,63 @@
           "default": true
         },
         {
+          "type": "header",
+          "content": "Badge 1"
+        },
+        {
           "type": "image_picker",
-          "id": "custom_security_badge",
-          "label": "Security badge",
+          "id": "custom_security_badge_1",
+          "label": "Security badge 1",
           "info": "800 x 200px .jpg recommended"
         },
         {
           "type": "range",
-          "id": "custom_security_badge_width",
+          "id": "custom_security_badge_width_1",
           "min": 100,
           "max": 500,
           "step": 10,
           "unit": "px",
-          "label": "Security badge width",
+          "label": "Security badge 1 width",
+          "default": 200
+        },
+        {
+          "type": "header",
+          "content": "Badge 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_security_badge_2",
+          "label": "Security badge 2",
+          "info": "800 x 200px .jpg recommended"
+        },
+        {
+          "type": "range",
+          "id": "custom_security_badge_width_2",
+          "min": 100,
+          "max": 500,
+          "step": 10,
+          "unit": "px",
+          "label": "Security badge 2 width",
+          "default": 200
+        },
+        {
+          "type": "header",
+          "content": "Badge 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_security_badge_3",
+          "label": "Security badge 3",
+          "info": "800 x 200px .jpg recommended"
+        },
+        {
+          "type": "range",
+          "id": "custom_security_badge_width_3",
+          "min": 100,
+          "max": 500,
+          "step": 10,
+          "unit": "px",
+          "label": "Security badge 3 width",
           "default": 200
         }
       ]
