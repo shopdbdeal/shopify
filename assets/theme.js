@@ -18752,3 +18752,14 @@ document.addEventListener('DOMContentLoaded', function() {
     draggable: true
   });
 });
+function updateTimer() {
+  document.querySelectorAll('.product-promo-bar__timer').forEach(timer => {
+    const hours = timer.querySelector('span:nth-child(1)');
+    const minutes = timer.querySelector('span:nth-child(3)');
+    const seconds = timer.querySelector('span:nth-child(5)');
+    
+    // Logique de calcul du temps restant ici
+  });
+}
+
+setInterval(updateTimer, 1000);
