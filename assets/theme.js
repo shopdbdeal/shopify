@@ -18741,3 +18741,14 @@
   })();
 
 })));
+
+document.addEventListener('DOMContentLoaded', function() {
+  const promoBar = new Flickity('.product-promo-bar__inner', {
+    autoPlay: 6000,       // Change slide toutes les 6s
+    pageDots: false,       // Masquer les points
+    prevNextButtons: true, // Afficher flèches
+    wrapAround: true,      // Défilement infini
+    cellAlign: 'center',
+    draggable: true
+  });
+});
