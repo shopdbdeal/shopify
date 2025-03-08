@@ -74,7 +74,7 @@
         "enable_video_looping": false,
         "enable_image_zoom": false,
         "zoom_effect": "outside",
-        "carousel_effect": "slide"
+        "carousel_effect": "fade"
       }
     },
     "product-recommendations": {
