@@ -18741,25 +18741,3 @@
   })();
 
 })));
-
-document.addEventListener('DOMContentLoaded', function() {
-  const promoBar = new Flickity('.product-promo-bar__inner', {
-    autoPlay: 6000,       // Change slide toutes les 6s
-    pageDots: false,       // Masquer les points
-    prevNextButtons: true, // Afficher flèches
-    wrapAround: true,      // Défilement infini
-    cellAlign: 'center',
-    draggable: true
-  });
-});
-function updateTimer() {
-  document.querySelectorAll('.product-promo-bar__timer').forEach(timer => {
-    const hours = timer.querySelector('span:nth-child(1)');
-    const minutes = timer.querySelector('span:nth-child(3)');
-    const seconds = timer.querySelector('span:nth-child(5)');
-    
-    // Logique de calcul du temps restant ici
-  });
-}
-
-setInterval(updateTimer, 1000);
