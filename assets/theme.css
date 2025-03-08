@@ -13870,3 +13870,49 @@ shopify-payment-terms {
     min-width: 0;
   }
 }
+/* Style de base */
+.product-promo-bar {
+  background: #1a237e;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+/* Carrousel Flickity */
+.product-promo-bar__inner {
+  display: flex;
+  text-align: center;
+}
+
+.product-promo-bar__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Boutons de navigation */
+.flickity-button {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.flickity-button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Timer */
+.product-promo-bar__timer {
+  font-weight: 700;
+  color: #ffd700;
+}
+
+/* Bouton Shop Now */
+.product-promo-bar__shop-now-link {
+  text-decoration: underline;
+  margin-left: 10px;
+}
