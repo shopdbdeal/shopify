@@ -43,13 +43,31 @@
           "settings": {
             "display_mode": "view_more"
           }
+        },
+        "liquid_FYe6DG": {
+          "type": "liquid",
+          "settings": {
+            "title": "Shipping & Returns",
+            "liquid": "<br><div id=\"block-template--16894659461256__main-38c6d01e-86bf-4a66-819b-4002b0379e5f\" class=\"card__collapsible\" style=\"height: auto;\">\n                          <div class=\"card__collapsible-content\">\n                            <div class=\"rte text--pull\">\n                              <ul>\n<li>Free shipping&nbsp;for all orders over <span class=\"shipping-policy-shipping-amount\">$49.</span>\n</li>\n<li>Once your product has shipped, it usually takes 2 to&nbsp;5 business days to receive depending on your location.</li>\n<li>You can return your product up to 30 days after receiving your order. Please make sure that the products are not used or damaged and in the original box.</li>\n</ul>\n                            </div>\n                          </div>\n                        </div>",
+            "display_mode": "collapse"
+          }
+        },
+        "trust_pQ6iGw": {
+          "type": "trust",
+          "settings": {
+            "trust_title": "Payment & Security",
+            "show_payment_icons": true,
+            "custom_security_badge_width": 200
+          }
         }
       },
       "block_order": [
         "product_meta",
         "variant_selector",
         "buy_buttons",
-        "description"
+        "description",
+        "liquid_FYe6DG",
+        "trust_pQ6iGw"
       ],
       "settings": {
         "image_size": "small",
