@@ -60,7 +60,7 @@
             "custom_security_badge_1": "shopify://shop_images/svgexport-1.svg",
             "custom_security_badge_width_1": 100,
             "badge_link_1": "",
-            "popup_content_1": "<p>dsfsq</p>",
+            "popup_content_1": "<p>&lt;divstyle=\"max-width:430px; margin:auto; background:#e6e7e8; padding:20px;\"&gt;&lt;iframestyle=\"width:100%; height:400px; border:0;\"src=\"https://www.trustedsite.com/verify-modal?&host=dailysale.com&lang=en\"&gt;&lt;/iframe&gt;&lt;/div&gt;</p>",
             "custom_security_badge_2": "shopify://shop_images/k.svg",
             "custom_security_badge_width_2": 70,
             "badge_link_2": "",
