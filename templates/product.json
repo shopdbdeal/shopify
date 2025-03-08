@@ -41,7 +41,7 @@
         "description": {
           "type": "description",
           "settings": {
-            "display_mode": "show_all"
+            "display_mode": "view_more"
           }
         }
       },
