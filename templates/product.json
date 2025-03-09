@@ -181,13 +181,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "video_6DM6Wy": {
-      "type": "video",
-      "settings": {
-        "title": "Videos",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
-      }
     }
   },
   "order": [
@@ -199,7 +192,6 @@
     "loox-product-reviews-app-section",
     "17414857553d2ca024",
     "1741487595e45c1caf",
-    "1741488582c6c72a34",
-    "video_6DM6Wy"
+    "1741488582c6c72a34"
   ]
 }
