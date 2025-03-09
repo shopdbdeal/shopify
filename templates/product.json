@@ -70,6 +70,10 @@
             "badge_link_3": "",
             "popup_html_3": ""
           }
+        },
+        "judge_me_reviews_review_snippet_widget_zHX49L": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
       "block_order": [
@@ -78,7 +82,8 @@
         "buy_buttons",
         "description",
         "liquid_FYe6DG",
-        "trust_pQ6iGw"
+        "trust_pQ6iGw",
+        "judge_me_reviews_review_snippet_widget_zHX49L"
       ],
       "settings": {
         "image_size": "small",
