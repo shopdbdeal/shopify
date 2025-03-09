@@ -452,7 +452,7 @@
 </style>
 
 <script>
-document.querySelectorAll('.badge-trigger').forEach(button => {
+document.querySelectorAll('.badge-popup-trigger').forEach(button => {
   button.addEventListener('click', (e) => {
     const badgeNumber = e.currentTarget.dataset.badge
     document.getElementById(`popup-${badgeNumber}`).style.display = 'block'
