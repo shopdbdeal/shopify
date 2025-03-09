@@ -70,6 +70,26 @@
             "badge_link_3": "",
             "popup_html_3": ""
           }
+        },
+        "judge_me_reviews_all_reviews_text_GmqRP6": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "judge_me_reviews_medals_gtyN8e": {
+          "type": "shopify://apps/judge-me-reviews/blocks/medals/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_VtLgzW": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "judge_me_reviews_ugc_media_grid_x7Q8GP": {
+          "type": "shopify://apps/judge-me-reviews/blocks/ugc_media_grid/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "judge_me_reviews_verified_badge_4cTh9y": {
+          "type": "shopify://apps/judge-me-reviews/blocks/verified_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
       "block_order": [
@@ -78,7 +98,12 @@
         "buy_buttons",
         "description",
         "liquid_FYe6DG",
-        "trust_pQ6iGw"
+        "trust_pQ6iGw",
+        "judge_me_reviews_all_reviews_text_GmqRP6",
+        "judge_me_reviews_medals_gtyN8e",
+        "judge_me_reviews_preview_badge_VtLgzW",
+        "judge_me_reviews_ugc_media_grid_x7Q8GP",
+        "judge_me_reviews_verified_badge_4cTh9y"
       ],
       "settings": {
         "image_size": "small",
