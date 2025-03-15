@@ -127,7 +127,6 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "show_quick_buy": false
@@ -135,7 +134,6 @@
     },
     "recently-viewed-products": {
       "type": "recently-viewed-products",
-      "disabled": true,
       "settings": {
         "title": "Recently viewed",
         "show_quick_buy": false
