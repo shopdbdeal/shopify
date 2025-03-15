@@ -25,7 +25,7 @@
           "type": "variant_selector",
           "settings": {
             "selector_mode": "block",
-            "color_mode": "color",
+            "color_mode": "variant_image",
             "show_quantity_selector": true,
             "show_taxes_included": false,
             "show_inventory_quantity": true,
