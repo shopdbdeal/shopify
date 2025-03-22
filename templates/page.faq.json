@@ -119,7 +119,7 @@
           "type": "question",
           "settings": {
             "title": "What is your return and refund policy?",
-            "answer": "<p>We accept returns and refunds within 90 days of delivery. Items must be unused, in original condition and in the original packaging.</p>"
+            "answer": "<p>We accept returns and refunds within 30 days of delivery. Items must be unused, in original condition and in the original packaging.</p>"
           }
         },
         "question_EYFML3": {
