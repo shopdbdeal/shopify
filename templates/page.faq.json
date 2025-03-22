@@ -37,7 +37,7 @@
           "type": "question",
           "settings": {
             "title": "What are your delivery costs and times?",
-            "answer": "<p>Delivery is free in France via Colissimo with tracking, and the delivery time is 2 to 7 working days. Within the United States, shipping is free via USPS with tracking, and delivery time is also 2-7 business days.</p>"
+            "answer": "<p>Free USPS shipping within the United States on orders over $49 (2-7 business days); $6.90 shipping for orders under $49.</p>"
           }
         },
         "question-2": {
