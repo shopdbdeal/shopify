@@ -208,7 +208,7 @@
           "static-text-with-icons-3"
         ],
         "settings": {
-          "show_section": true,
+          "show_section": false,
           "stack_mobile": false
         }
       }
